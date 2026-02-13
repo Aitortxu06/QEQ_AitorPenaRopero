@@ -1,3 +1,77 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* --- CLAVE PARA EL 4X4 (Galería de arriba) --- */
+.galeria-manual {
+    display: grid;
+    /* Esto obliga a tener EXACTAMENTE 4 columnas */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px; /* Espacio entre huecos */
+    max-width: 1000px;
+    margin: 0 auto; /* Centrar todo el bloque */
+    padding: 20px;
+}
+
+/* --- CLAVE PARA EL JUEGO (Tablero de abajo) --- */
+.grid-container {
+    display: grid;
+    /* Usamos lo mismo, 4 columnas (o 5 si tuvieras 25 personajes) */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- ESTILO DE LAS TARJETAS (Ficha y Carta) --- */
+/* Aplicamos estilo tanto a la ficha de arriba como a la carta de juego */
+.ficha, .carta-personaje {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    
+    /* Para que el contenido se centre bien */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- IMÁGENES --- */
 img {
-    height: 10em;
+    width: 100%;       /* Que ocupe el ancho de su cajita */
+    height: 150px;     /* Altura fija para que todas sean iguales */
+    object-fit: contain; /* Para que la imagen no se deforme/estire */
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* --- FOOTER GITHUB --- */
+#github-info {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-top: 2px solid #333;
+}
+
+.github-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.github-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }

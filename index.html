@@ -1,8 +1,42 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
     <head>
-        <title>Ampliación del reto - Nombre Apellido1 Apellido2</title>
+        <meta charset="UTF-8">
+        <title>Ampliación del reto - Aitor Peña Ropero</title>
         <link rel="stylesheet" href="estilos/estilos.css">
+
+        <script src="js/conseguirImagenes.js" defer></script>
+        <script src="js/generarImagenes.js" defer></script>
+        <script src="js/generarAdivinar.js" defer></script>
+        <script src="js/resetearJuego.js" defer></script>
+        <script src="js/apiGithub.js" defer></script>
     </head>
     <body>
+        <header>
+             <h1>Quién es Quién: Edición Ghibli</h1>
+        </header>
+
+        <main>
+            <section id="zona-adivinar">
+                <h2>Personaje a adivinar:</h2>
+                <div id="imagen-objetivo"></div>
+                <h3 id="nombre-objetivo" style="display: none;"></h3> 
+            </section>
+
+            <hr>
+
+            <section id="tablero" class="grid-container">
+                </section>
+
+            <div class="controles">
+                <button id="btn-reset" style="padding: 10px 20px; font-size: 1.2em; margin: 20px; cursor: pointer;">
+                    Resetear Juego
+                </button>
+            </div>
+
+        </main>
+        
+        <footer id="github-info"></footer>
+
     </body>
 </html>
